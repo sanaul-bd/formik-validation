@@ -1,9 +1,68 @@
-import React from 'react'
+// src/components/RegistrationForm.jsx
+import React, { useState } from 'react';
+import './Css/Login.css'
 
-function Login() {
-  return (
-    <div>Login Page</div>
-  )
+const Login = () => {
+    const [formData, setFormData] = useState({
+        firstName: '',
+        lastName: '',
+        address: '',
+        age: '',
+        number: '',
+        email: '',
+        password: '',
+        confirmPassword: '',
+    });
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Handle form submission
+        console.log(formData);
+    };
+
+    return (
+        <div className='flex justify-center m-10 '>
+            <form className='input-form' onSubmit={handleSubmit}>
+                <div className='inputDiv'>
+                    <label>First Name:</label>
+                    <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} />
+                </div>
+                <div className='inputDiv'>
+                    <label>Last Name:</label>
+                    <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} />
+                </div>
+                <div className='inputDiv'>
+                    <label>Address:</label>
+                    <input type="text" name="address" value={formData.address} onChange={handleChange} />
+                </div>
+                <div className='inputDiv'>
+                    <label>Age:</label>
+                    <input type="date" name="age" value={formData.age} onChange={handleChange} />
+                </div>
+                <div className='inputDiv'>
+                    <label>Phone Number:</label>
+                    <input type="tel" name="number" value={formData.number} onChange={handleChange} />
+                </div>
+                <div className='inputDiv'>
+                    <label>Email:</label>
+                    <input type="email" name="email" value={formData.email} onChange={handleChange} />
+                </div>
+                <div className='inputDiv'>
+                    <label>Password:</label>
+                    <input type="password" name="password" value={formData.password} onChange={handleChange} />
+                </div>
+                <div className='inputDiv'>
+                    <label>Confirm Password:</label>
+                    <input type="password" name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} />
+                </div>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    );
 }
 
-export default Login
+export default Login;

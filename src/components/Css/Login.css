@@ -1,0 +1,14 @@
+
+.input-form input {
+    text-align: left;
+    display: block; 
+    margin-bottom: 10px; 
+    width: 350px; 
+    background: rgb(74, 63, 63);
+    padding: 5px 10px;
+  }
+
+  .input-form{
+    background: grey;
+    padding: 20px 50px;
+  }
