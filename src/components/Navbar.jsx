@@ -3,6 +3,8 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Registration from './Registration';
 import Home from './Home';
 import Login from './Login';
+import Feture from './Feture';
+import SimpleLogin from './SimpleLogin';
 
 export const Navbar = () => {
     return (
@@ -19,6 +21,12 @@ export const Navbar = () => {
                         <li>
                             <Link to="/registration">Registration</Link>
                         </li>
+                        <li>
+                            <Link to="/feature">Basic login</Link>
+                        </li>
+                        <li>
+                            <Link to="/simpleLogin">Simple Login</Link>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -26,6 +34,8 @@ export const Navbar = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/registration" element={<Registration />} />
+                <Route path="/feature" element={<Feture />} />
+                <Route path="/simpleLogin" element={<SimpleLogin />} />
             </Routes>
         </div>
     )

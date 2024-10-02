@@ -1,6 +1,7 @@
 // src/components/RegistrationForm.jsx
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './Css/Login.css'
+
 
 const Login = () => {
     const [formData, setFormData] = useState({
@@ -11,7 +12,7 @@ const Login = () => {
         number: '',
         email: '',
         password: '',
-        confirmPassword: '',
+        passwordConfirm: '',
     });
 
     const handleChange = (e) => {
@@ -57,7 +58,7 @@ const Login = () => {
                 </div>
                 <div className='inputDiv'>
                     <label>Confirm Password:</label>
-                    <input type="password" name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} />
+                    <input type="password" name="passwordConfirm" value={formData.passwordConfirm} onChange={handleChange} />
                 </div>
                 <button type="submit">Register</button>
             </form>
