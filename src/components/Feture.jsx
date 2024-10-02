@@ -5,7 +5,7 @@ import { FaEyeSlash } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
 import { useState } from "react";
 
-// as far i know
+// as far i know .
 
 function Feture() {
 
